@@ -10,7 +10,8 @@
       --arka-plan: #1f1f1f;
       --yazi-renk: #ffffff;
       --kod-renk: #ffcc00;
-
+      --outline-px: 1px;
+      --outline-renk: rgb(48, 54, 61);
     }
 
     body {
@@ -24,10 +25,13 @@
     }
 
     .code-div {
-      background-color: var(--arka-plan);
+      border: var(--outline-px) solid var(--outline-renk);
       padding: 2px 4px;
-      border-radius: 6px;
-      border : 1px solid rgb(48, 54, 61)
+    }
+
+    code {
+      background-color: var(--arka-plan);
+      color: var(--kod-renk);
     }
   </style>
 </head>
@@ -35,12 +39,12 @@
 <body>
   <h1>Dark Mode Örneği</h1>
 
-  <p>Bu bir <code class="code-div">code</code> örneğidir.</p>
-
-  <pre><code class="language-javascript code-div">
-    const ad = 'John';
-    console.log(`Merhaba, ben aa ${ad}!`);
-  </code></pre>
+  <div class="code-div">
+    <code class="language-javascript">
+      const ad = 'John';
+      console.log(`Merhaba, ben ${ad}!`);
+    </code>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
