@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Örneği</title>
+  <style>
+    :root {
+      --arka-plan: #1f1f1f;
+      --yazi-renk: #ffffff;
+      --kod-renk: #ffcc00;
+      --outline-renk: #625a50;
+      --outline-px: max(1px, 0.0625rem);
+    }
+
+    body {
+      background-color: var(--arka-plan);
+      color: var(--yazi-renk);
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: var(--yazi-renk);
+    }
+
+    .code-div {
+      background-color: var(--arka-plan);
+      color: var(--kod-renk);
+      padding: 2px 4px;
+      border-radius: 6px;
+      outline: var(--outline-px) solid var(--outline-renk);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Dark Mode Örneği</h1>
+
+  <p>Bu bir <code class="code-div">code</code> örneğidir.</p>
+
+  <pre><code class="language-javascript">
+    const ad = 'John';
+    console.log(`Merhaba, ben ${ad}!`);
+  </code></pre>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+</body>
+
+</html>
